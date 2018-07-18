@@ -19,14 +19,25 @@ class EventForm: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
+    private func setupViews() {
         addSubviews(firstNameField, lastNameField, companyField)
+        addSubviews(emailField, phoneField, cityField)
+    }
+    
+    func applyConstraints() {
+        
+    }
+    
+    func setup() {
+        setupViews()
+        applyConstraints()
     }
 }
 
